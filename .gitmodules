@@ -1,0 +1,12 @@
+[submodule "services/panel/when-rad"]
+	path = services/panel/when-rad
+	url = https://github.com/cisaacstern/when-rad.git
+[submodule "services/panel/lidar-nn"]
+	path = services/panel/lidar-nn
+	url = https://github.com/cisaacstern/lidar-nn.git
+[submodule "services/panel/get-dem"]
+	path = services/panel/get-dem
+	url = https://github.com/cisaacstern/get-dem.git
+[submodule "services/panel/ufunc-correct"]
+	path = services/panel/ufunc-correct
+	url = https://github.com/cisaacstern/ufunc-correct.git

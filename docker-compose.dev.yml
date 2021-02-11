@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+  panel:
+    build:
+      context: ./services/panel
+      dockerfile: Dockerfile.dev
+    command: panel serve ${APPS} --allow-websocket-origin=${ORIGIN} --use-xheaders
+    volumes:
+      - /usr/src/app/
+    ports:
+      - 5006:5006
