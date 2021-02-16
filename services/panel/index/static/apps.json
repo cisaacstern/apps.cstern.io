@@ -1,0 +1,24 @@
+{
+    "badge": {
+        "base": "https://img.shields.io/github/last-commit/cisaacstern/",
+        "tail": "?logo=github&amp&style=flat-square&color=darkslategrey&labelColor=e0e0e0&logoColor=darkslategrey"
+    },
+    "apps":[
+        {
+        "name": "lidar-nn",
+        "description": "Hello"
+        },
+        {
+        "name": "ufunc-correct",
+        "description": "Calculates terrain correction factors—used in radiation modeling—for each cell of an input DEM."
+        },
+        {
+        "name": "when-rad",
+        "description": "Hello"
+        },
+        {
+        "name": "get-dem",
+        "description": "Hello"
+        }
+    ]
+}
