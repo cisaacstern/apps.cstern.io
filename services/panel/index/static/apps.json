@@ -6,18 +6,22 @@
     "apps":[
         {
         "name": "lidar-nn",
-        "description": "Hello"
+        "js_var": "lidarNN",
+        "description": "Applies a nearest neighbor (nn) interpolation to a LiDAR pointcloud and returns a regularized grid."
         },
         {
         "name": "ufunc-correct",
+        "js_var": "ufuncCorrect",
         "description": "Calculates terrain correction factors—used in radiation modeling—for each cell of an input DEM."
         },
         {
         "name": "when-rad",
+        "js_var": "whenRad",
         "description": "Hello"
         },
         {
         "name": "get-dem",
+        "js_var": "getDem",
         "description": "Hello"
         }
     ]

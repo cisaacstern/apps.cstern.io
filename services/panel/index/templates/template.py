@@ -11,7 +11,17 @@ template = """
 <!-- goes in body -->
 {% block contents %}
 
-<p id="description">{{ description }}</p>
+<p id="description">
+    {{ description }}
+    These are apps by <a href="http://138.197.205.106:5000/" class="txt">Charles Stern</a>.
+    Launch <i class="fas fa-external-link-square-alt"></i>
+    , checkout source <i class="fab fa-github"></i>,
+    and read backstories <i class="fas fa-book-open"></i>.
+    <br>
+    If a project isn't an app, it might be a 
+    <a href="https://cstern.io/projects" class="txt">#script</a> or
+    <a href="https://cstern.io/projects" class="txt">#template</a>.
+</p>
 <br>
 <div class="container">
 <ul>
@@ -19,7 +29,9 @@ template = """
 
     <li>
     <h1>
-        {{ app['name'] }}
+        <i id="{{ app['name'] }}-btn" class="fas fa-caret-right">
+            <span class="title"> {{ app['name'] }} <span>
+        </i>
         <a href="https://apps.cstern.io/{{ app['name'] }}" target="_blank">
             <span class="change-icon">
             <i class="fas fa-external-link-square-alt"></i>
@@ -27,7 +39,7 @@ template = """
             </span>
         </a>
     </h1>
-    <blockquote>
+    <blockquote id="{{ app['name'] }}-block" class="invisible">
         <a href="https://github.com/cisaacstern/{{ app['name'] }}" target="_blank">
             <img class="round-corners" alt="GitHub" 
                     src="{{ badge['base'] + app['name'] + badge['tail']}}">
@@ -44,5 +56,26 @@ template = """
     </blockquote></li>
     {% endfor %}
 </div>
+
+{% for app in apps %}
+<script type='text/javascript'>
+
+    var {{ app['js_var'] }}Block = document.getElementById("{{ app['name'] }}-block");
+    var {{ app['js_var'] }}Btn = document.getElementById("{{ app['name'] }}-btn");
+
+    function openClose(){
+        if ({{ app['js_var'] }}Block.className == "invisible") {
+            {{ app['js_var'] }}Block.className = "visible";
+            {{ app['js_var'] }}Btn.className = "fas fa-caret-down";
+        } else {
+            {{ app['js_var'] }}Block.className = "invisible";
+            {{ app['js_var'] }}Btn.className = "fas fa-caret-right";
+        }
+    }
+
+    {{ app['js_var'] }}Btn.addEventListener('click', openClose);
+</script>
+{% endfor %}
+
 {% endblock %}
 """
