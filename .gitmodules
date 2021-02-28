@@ -10,3 +10,6 @@
 [submodule "services/panel/ufunc-correct"]
 	path = services/panel/ufunc-correct
 	url = https://github.com/cisaacstern/ufunc-correct.git
+[submodule "services/panel/toporad-timelapse"]
+	path = services/panel/toporad-timelapse
+	url = https://github.com/cisaacstern/toporad-timelapse.git
