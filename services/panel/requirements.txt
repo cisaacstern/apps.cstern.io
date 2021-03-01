@@ -1,3 +1,9 @@
+bokeh==2.2.3
+holoviews
 matplotlib
+pandas
 panel
+pysolar
+scipy
+richdem
 toml

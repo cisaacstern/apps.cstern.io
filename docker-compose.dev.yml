@@ -5,8 +5,16 @@ services:
     build:
       context: ./services/panel
       dockerfile: Dockerfile.dev
-    command: panel serve ${APPS} --allow-websocket-origin=${ORIGIN} --use-xheaders
+    command: >
+      sh -c "
+      panel serve index ${ARGS_1} & 
+      panel serve lidar-nn ${ARGS_2} &
+      panel serve ufunc-correct ${ARGS_3} &
+      panel serve when-rad ${ARGS_4}"
     volumes:
       - /usr/src/app/
     ports:
       - 5006:5006
+      - 5007:5007
+      - 5008:5008
+      - 5009:5009
