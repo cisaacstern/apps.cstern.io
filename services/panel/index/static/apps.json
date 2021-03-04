@@ -12,17 +12,17 @@
         {
         "name": "ufunc-correct",
         "js_var": "ufuncCorrect",
-        "description": "Calculates terrain correction factors—used in radiation modeling—for each cell of an input DEM."
+        "description": "Calculates terrain correction factors used in radiation modeling for each cell of an input DEM."
         },
         {
         "name": "when-rad",
         "js_var": "whenRad",
-        "description": "Hello"
+        "description": "Calculates if/when each point on a DEM is exposed to direct solar radiation. Example of Numba-accelerated functional Python."
         },
         {
         "name": "get-dem",
         "js_var": "getDem",
-        "description": "Hello"
+        "description": "For any point selected on the US map, retrieves corresponding 1 arc-second DEMs from USGS via HTTP request."
         }
     ]
 }

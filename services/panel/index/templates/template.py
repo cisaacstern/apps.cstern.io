@@ -13,14 +13,11 @@ template = """
 
 <p id="description">
     {{ description }}
-    These are apps by <a href="http://138.197.205.106:5000/" class="txt">Charles Stern</a>.
-    Launch <i class="fas fa-external-link-square-alt"></i>
-    , checkout source <i class="fab fa-github"></i>,
-    and read backstories <i class="fas fa-book-open"></i>.
-    <br>
+    These are apps by <a href="https://cstern.io" class="txt">Charles Stern</a>.
     If a project isn't an app, it might be a 
-    <a href="https://cstern.io/projects" class="txt">#script</a> or
-    <a href="https://cstern.io/projects" class="txt">#template</a>.
+    <a href="https://cstern.io/projects?tags=site" class="txt">#site</a>, 
+    <a href="https://cstern.io/projects?tags=analysis" class="txt">#analysis</a>, or 
+    <a href="https://cstern.io/projects?tags=feature" class="txt">#feature</a>.
 </p>
 <br>
 <div class="container">
@@ -47,7 +44,7 @@ template = """
         <p>
             {{ app['description'] }}
         </p>
-        <a href="https://cstern.io/projects/{{ app['name'] }}" target="_blank">
+        <a href="https://cstern.io/projects/{{ app['name'] }}">
             <span class="change-icon read">
             <i class="fas fa-book-open"></i>
             <i class="fas fa-book-reader"></i>
