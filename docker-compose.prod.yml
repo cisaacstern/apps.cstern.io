@@ -10,7 +10,8 @@ services:
       panel serve index ${ARGS_1} & 
       panel serve lidar-nn ${ARGS_2} &
       panel serve ufunc-correct ${ARGS_3} &
-      panel serve when-rad ${ARGS_4}"
+      panel serve when-rad ${ARGS_4}
+      panep serve get-dem ${ARGS_5}"
     volumes:
       - /usr/src/app/
     expose:
